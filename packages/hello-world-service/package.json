@@ -1,0 +1,20 @@
+{
+  "name": "@munchii/nodejs-typescript-monorepo-hello-world-service",
+  "version": "1.0.0",
+  "main": "dist/src/index.js",
+  "license": "ISC",
+  "scripts": {
+    "clean": "npm run compile -- --clean && rm -rf dist dist-docker",
+    "compile": "tsc --build",
+    "start": "ts-node src/index.ts",
+    "prestart-docker": "esbuild src/index.ts --platform=node --target=node20 --sourcemap --bundle --outdir=dist-docker",
+    "start-docker": "docker run --rm -p 43037:43037 -it $(docker build -q .)"
+  },
+  "dependencies": {
+    "@munchii/nodejs-typescript-monorepo-hello-world-common": "1.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.19.3",
+    "ts-node": "^10.9.1"
+  }
+}

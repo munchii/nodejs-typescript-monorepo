@@ -1,0 +1,14 @@
+{
+  "extends": "@tsconfig/node20/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "."
+  },
+  "references": [
+    {
+      "path": "./packages/hello-world-common"
+    },
+    {
+      "path": "./packages/hello-world-service"
+    }
+  ]
+}

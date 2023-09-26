@@ -1,0 +1,10 @@
+{
+  "name": "@munchii/nodejs-typescript-monorepo-hello-world-common",
+  "version": "1.0.0",
+  "main": "dist/src/index.js",
+  "license": "ISC",
+  "scripts": {
+    "clean": "npm run compile -- --clean && rm -rf dist",
+    "compile": "tsc --build"
+  }
+}

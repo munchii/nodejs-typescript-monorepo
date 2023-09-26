@@ -11,7 +11,8 @@ I created this demonstration repository because I was unable to use npm ci with 
 This repository does not include/offer an opinion on:
 
 * server frameworks (it uses Node's createServer API)
-* test frameworks
+* logging frameworks (it uses Node's console API)
+* test frameworks (it relies on a human monkey)
 
 ## Getting Started
 1. Install nvm and run `nvm use`
